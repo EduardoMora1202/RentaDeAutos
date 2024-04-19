@@ -1,0 +1,119 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/css/Login.css">
+</head>
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Crea una cuenta para iniciar session</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+
+                <form class="form form-register" id="FormularioCrearCuenta" action="/" method="post" novalidate>
+                    <div>
+                        <label>
+                            <i class='bx bx-user'></i>
+                            <input type="text" placeholder="Identificacion" name="cedula" id="CrearUserIdentificacion" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="text" placeholder="Nombre del Usuario" name="Name" id="CrearuserNombre" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="text" placeholder="Direccion" name="dire" id="CrearuserDireccion" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="text" placeholder="Telefono" name="tele" id="CrearuserTelefono" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label style="padding: 10px;">
+                            <i class='bx bx-lock-alt'></i>
+                            <select type="text" name="tipoCliente"  id="CrearusertipoCliente" style="">
+                                <option value="1">Nacional</option>
+                                <option value="2">Extranjero</option>
+
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="pass" id="CrearuserContrasena" required>
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Registrarse" id="BtnInicioSession">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡¡Bienvenido nuevamente!!</h2>
+                <p>Inicia Session para poder alquilar un Vehiculo</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+
+                <form class="form form-login" id="FormularioInicarSesion" action="/" method="post" novalidate>
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="text" class="name" name="cedula" id="IniUserIdentificacion" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="pass" id="iniUserContrasena" required>
+                        </label>
+                    </div>
+                    <input type="submit" value="Iniciar Sesión" id="BtnInicioSession">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/js/script.js"></script>
+    <script src="~/Content/js/registrar.js"></script>
+    <script src="~/Content/js/Login.js"></script>
+</body>
+</html>
