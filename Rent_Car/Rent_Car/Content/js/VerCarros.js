@@ -10,7 +10,9 @@
             type: 'GET',
             success: function (data) {
                 //window.location.href = "/Home/VerDetallesAutos?id=" + autoId;
-                window.location.href = "/Home/VerDetallesAutos";
+                window.location.href = "/Home/VerDetallesAutos?id=" + autoId;
+                alert("Detalles del vehículo cargados correctamente.");
+
             },
             error: function (xhr, status, error) {
                 console.error("Error al obtener detalles del vehículo:", error);
