@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="~/Content/css/flaticon.css">
     <link rel="stylesheet" href="~/Content/css/icomoon.css">
     <link rel="stylesheet" href="~/Content/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Incluye tu archivo JavaScript -->
+    <script src="~/Content/js/DetallesAutos.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -80,8 +84,8 @@
                     <div class="car-details">
                         <div class="img rounded" style="background-image: url(/Content/images/bg_1.jpg);"></div>
                         <div class="text text-center">
-                            <span class="subheading">Cheverolet</span>
-                            <h2>Mercedes Grand Sedan</h2>
+                            <span class="subheading" id="marca">Cheverolet</span>
+                            <h2 id="modelo">Mercedes Grand Sedan</h2>
                         </div>
                     </div>
                 </div>
@@ -131,7 +135,7 @@
                                 <div class="text">
                                     <h3 class="heading mb-0 pl-3">
                                         Asientos
-                                        <span>5 Adultos</span>
+                                        <span id="Capacidad_Pasajeros"></span>
                                     </h3>
                                 </div>
                             </div>
@@ -165,7 +169,7 @@
                                 <div class="text">
                                     <h3 class="heading mb-0 pl-3">
                                         Combustible
-                                        <span>Gasolina</span>
+                                        <span id="TipoCombustible"></span>
                                     </h3>
                                 </div>
                             </div>
