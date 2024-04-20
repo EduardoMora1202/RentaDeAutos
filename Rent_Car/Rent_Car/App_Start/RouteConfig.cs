@@ -16,7 +16,7 @@ namespace Rent_Car
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "VerAutosAlquilado", id = UrlParameter.Optional }
+                defaults: new { controller = "Admin", action = "IngresoVehiculosAdmin", id = UrlParameter.Optional }
             );
         }
     }
