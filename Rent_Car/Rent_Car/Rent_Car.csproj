@@ -164,6 +164,7 @@
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\VerVehiculosTable.css" />
     <Content Include="Content\fonts\flaticon\backup.txt" />
     <Content Include="Content\fonts\flaticon\font\flaticon.css" />
     <Content Include="Content\fonts\flaticon\font\flaticon.html" />
@@ -194,6 +195,7 @@
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\DetallesAutos.js" />
     <Content Include="Content\js\google-map.js" />
+    <Content Include="Content\js\InformacionAutoTable.js" />
     <Content Include="Content\js\jquery-3.2.1.min.js" />
     <Content Include="Content\js\jquery-migrate-3.0.1.min.js" />
     <Content Include="Content\js\jquery.animateNumber.min.js" />
@@ -205,6 +207,7 @@
     <Content Include="Content\js\jquery.waypoints.min.js" />
     <Content Include="Content\js\Login.js" />
     <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\ModificarVehiculo.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="Content\js\popper.min.js" />
     <Content Include="Content\js\range.js" />
@@ -212,6 +215,7 @@
     <Content Include="Content\js\script.js" />
     <Content Include="Content\js\scrollax.min.js" />
     <Content Include="Content\js\VerCarros.js" />
+    <Content Include="Content\js\VerTablaClientesAdmi.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -370,6 +374,9 @@
     <Content Include="Views\Home\VerAutosAlquilado.cshtml" />
     <Content Include="Views\Home\VerDetallesAutos.cshtml" />
     <Content Include="Views\Admin\IngresoVehiculosAdmin.cshtml" />
+    <Content Include="Views\Admin\VerVehiculosAdmin.cshtml" />
+    <Content Include="Views\Admin\ModificarInfoVehiculo.cshtml" />
+    <Content Include="Views\Admin\VerClienteAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

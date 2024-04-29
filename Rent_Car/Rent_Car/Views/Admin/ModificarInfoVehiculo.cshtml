@@ -1,12 +1,14 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>IngresoVehiculosAdmin</title>
+    <title>ModificarInfoVehiculo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -19,7 +21,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css">
     <!-- CSS -->
     <link rel="stylesheet" href="~/Content/css/AgregarVehiculo.css">
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -60,27 +61,14 @@
             </button>
         </div>
     </nav>
+
     <section class="hero-section">
         <div class="container" style="background-color: #fff; ">
             <div class="text">
                 Agregar Vehiculo
             </div>
-            <form id="FormularioAgregarVehiculo" method="post" novalidate>
+            <form id="formularioModificar" method="post" novalidate>
                 <div class="form-row">
-                    <div>
-                        <label style="padding: 10px;">
-                            <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="TipoMarca" id="AgregarAutoMarca" style="">
-                                <option value="1">Toyota</option>
-                                <option value="2">Ford</option>
-                                <option value="3">Honda</option>
-                                <option value="4">BMW</option>
-                                <option value="5">Mercedes-Benz</option>
-                            </select>
-
-                        </label>
-                    </div>
-
                     <div class="input-data">
                         <input type="text" name="PlacaVehiculo" id="Placa" required>
                         <div class="underline"></div>
@@ -100,7 +88,6 @@
                         <input type="text" name="CapacidadPasajeros" id="CapaPasajeros" required>
                         <div class="underline"></div>
                         <label for="">Capacidad De Pasajeros</label>
-
                     </div>
                 </div>
                 <div class="form-row">
@@ -116,34 +103,6 @@
                         <label for="">Precio Del alquiler</label>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div>
-                        <label style="padding: 10px;">
-                            <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="TipoAuto" id="AgregarAutoTipoVehiculo" style="">
-                                <option value="1">Automovil</option>
-                                <option value="2">Moto</option>
-                                <option value="3">Camión</option>
-                                <option value="4">Buseta</option>
-                            </select>
-
-                        </label>
-                    </div>
-
-                    <div>
-                        <label style="padding: 10px;">
-                            <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="tipoCliente" id="AgregarAutoTipoConbustible" style="">
-                                <option value="1">Diesel</option>
-                                <option value="2">Gasolina</option>
-                                <option value="3">Hibrido</option>
-                                <option value="4">Eléctrico</option>
-                            </select>
-                        </label>
-
-                    </div>
-                </div>
-
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <input type="submit" class="btn btn-primary btn-rounded" value="Agregar Vehiculo" id="BtnAgregarVehiculo"
@@ -152,18 +111,13 @@
 
             </form>
         </div>
-
-
     </section>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous">
 
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/Content/js/AgregarVehiculo.js"></script>
-
+    <script src="~/Content/js/ModificarVehiculo.js"></script>
 </body>
 </html>

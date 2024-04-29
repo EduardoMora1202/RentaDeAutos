@@ -1,5 +1,16 @@
 import { getConnection, SQl, queries } from "../database/Index";
 
+export const VerAutosTable = async (req, res) => {
+  try {
+    const pool = await getConnection();
+    const request = await pool.request().query(queries.GetVerVehiculos);
+    res.json(request.recordset);
+  } catch (error) {
+    res.status(500);
+    res.send(error.message);
+  }
+};
+
 export const AgregarVehiculos = async (req, res) => {
   const {
     IdMarca,
@@ -26,6 +37,9 @@ export const AgregarVehiculos = async (req, res) => {
     });
   }
 
+  console.log(IdMarca,Modelo,idTipo_Vehiculo,Color,Placa,
+  Capacidad_Pasajeros,PrecioAlquilerDia,IdTipoCombustible)
+
   try {
     const pool = await getConnection();
     const request = pool.request();
@@ -42,6 +56,7 @@ export const AgregarVehiculos = async (req, res) => {
     await request.query(queries.GetAgregarNuevoVehiculo);
 
     res.status(201).json({
+      success: true,
       msg: "Vehiculo agregado correctamente",
       cliente: {
         IdMarca,
@@ -93,6 +108,10 @@ export const updateVehiculo = async (req, res) => {
       msg: "Solicitud incorrecta. Por favor llena todos los espacios",
     });
   }
+  console.log("id:", id);
+  console.log("Modelo:", Modelo);
+  console.log("Color:", Color);
+  console.log("Placa:", Placa);
   try {
     const pool = await getConnection();
 
@@ -105,6 +124,17 @@ export const updateVehiculo = async (req, res) => {
       .query(queries.updateVehiculo);
 
     res.json({ Modelo, Color, Placa });
+  } catch (error) {
+    res.status(500);
+    res.send(error.message);
+  }
+};
+/* Cliente  */
+export const VerClientesTable = async (req, res) => {
+  try {
+    const pool = await getConnection();
+    const request = await pool.request().query(queries.GetVerClintes);
+    res.json(request.recordset);
   } catch (error) {
     res.status(500);
     res.send(error.message);

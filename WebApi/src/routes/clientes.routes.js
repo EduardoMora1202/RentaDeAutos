@@ -12,6 +12,7 @@ import {
   deleteVehiculo,
   /*updateCliente*/
   updateVehiculo,
+  VerAutosTable,
 } from "../controllers/AdminController";
 
 const cors = require("cors");
@@ -28,6 +29,8 @@ router.post("/CrearClientes", crearClientes);
 router.post("/ValidarCliente", ValidarUsuario);
 
 /*Rutas Administrador*/
+router.get("/GetVerAutosTablas", VerAutosTable);
+
 router.post("/AgregarNuevoVehiculo", AgregarVehiculos);
 
 router.delete("/EliminarVehuculos/:id", deleteVehiculo);

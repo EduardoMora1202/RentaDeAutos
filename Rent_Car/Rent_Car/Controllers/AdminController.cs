@@ -13,6 +13,25 @@ namespace Rent_Car.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult VerVehiculosAdmin()
+        {
+            return View();
+        }
+
+        public ActionResult ModificarInfoVehiculo()
+        {
+            return View();
+        }
+
+        public ActionResult VerClienteAdmin()
+        {
+            return View();
+        }
+
+        public ActionResult ModificarInfoCliente()
+        {
+            return View();
+        }
     }
 }
