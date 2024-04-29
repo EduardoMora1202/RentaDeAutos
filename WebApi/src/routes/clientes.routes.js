@@ -3,10 +3,16 @@ import {
   crearClientes,
   getAutos,
   getVehiculosDetallesById,
-  deleteCliente,
-  updateCliente,
   ValidarUsuario,
 } from "../controllers/clientesController";
+
+import {
+  AgregarVehiculos,
+  /*deleteCliente, */
+  deleteVehiculo,
+  /*updateCliente*/
+  updateVehiculo,
+} from "../controllers/AdminController";
 
 const cors = require("cors");
 const router = Router();
@@ -19,10 +25,13 @@ router.get("/vehiculoDetallesID/:id", getVehiculosDetallesById);
 
 router.post("/CrearClientes", crearClientes);
 
-router.put("/ActualizarClientes/:id", updateCliente);
-
-router.delete("/EliminarClientes/:id", deleteCliente);
-
 router.post("/ValidarCliente", ValidarUsuario);
+
+/*Rutas Administrador*/
+router.post("/AgregarNuevoVehiculo", AgregarVehiculos);
+
+router.delete("/EliminarVehuculos/:id", deleteVehiculo);
+
+router.put("/ModificarVehiculo/:id", updateVehiculo);
 
 export default router;

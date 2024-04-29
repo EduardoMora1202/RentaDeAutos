@@ -1,0 +1,37 @@
+###
+# 1. Agregar Vehiculo nuevo
+###
+
+POST http://localhost:4000/AgregarNuevoVehiculo
+Content-Type: application/json
+
+{
+    "IdMarca":  "1",
+    "Modelo": "ejemplo3",
+    "idTipo_Vehiculo": "2",
+    "Color": "morado",
+    "Placa": "5689",
+    "Capacidad_Pasajeros": "4",
+    "PrecioAlquilerDia": "2000",
+    "IdTipoCombustible": "1"
+}
+
+### 
+# 2. Eliminar Vehiculos
+###
+
+DELETE http://localhost:4000/EliminarVehuculos/16
+
+###
+# 3. Modificar Vehiculo
+###
+
+PUT http://localhost:4000/ModificarVehiculo/15
+Content-Type: application/json
+
+{
+    "Modelo": "BMW",
+    "Color": "verde",
+    "Placa": "12457"
+}
+

@@ -17,7 +17,7 @@ $(document).ready(function () {
                 if (response.success) {
                     console.log(response);
                     alert("Inicio de Sesion Exitoso");
-                    //window.location.href = "/Home/CodigoVerificacionLogin";
+                    window.location.href = "/Home/Principal";
                 } else {
                     // Si hay un error en la validación del cliente, mostrar un mensaje de error
                     alert("Identificacion o Contraseña Incorrectas.");

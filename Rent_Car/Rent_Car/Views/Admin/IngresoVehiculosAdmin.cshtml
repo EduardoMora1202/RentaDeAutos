@@ -1,18 +1,164 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>IngresoVehiculosAdmin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/Content/css/AgregarVehiculo.css">
+
 </head>
 <body>
-    <div> 
-        <h1>hola mundo</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+
+            <a href="#" class="navbar-brand me-auto">Renta Car</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                 aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Taller Mecanico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link mx-lg-2 active">Agregar Vehiculo</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link mx-lg-2">ver Vehiculos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link mx-lg-2">Ver Clientes</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <a href="#" class="login-button">Login</a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container" style="background-color: #fff; ">
+            <div class="text">
+                Agregar Vehiculo
+            </div>
+            <form id="FormularioAgregarVehiculo" method="post" novalidate>
+                <div class="form-row">
+                    <div >
+                        <label style="padding: 10px;">
+                            <i class='bx bx-lock-alt'></i>
+                            <select type="text" name="TipoAuto" id="AgregarAutoTipoVehiculo" style="">
+                                <option value="1">Automovil</option>
+                                <option value="2">Moto</option>
+                                <option value="3">Camión</option>
+                                <option value="4">Buseta</option>
+                            </select>
+
+                        </label>
+                    </div>
+
+                    <div class="input-data">
+                        <input type="text" name="PlacaVehiculo" id="Placa" required>
+                        <div class="underline"></div>
+                        <label for="">Placa Del Vehiculo</label>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="ModeloVehiculo" id="Modelo" required>
+                        <div class="underline"></div>
+                        <label for="">Modelo Del Vehiculo</label>
+                    </div>
+
+                    <div class="input-data">
+                        <input type="text" name="CapacidadPasajeros" id="CapaPasajeros" required>
+                        <div class="underline"></div>
+                        <label for="">Capacidad De Pasajeros</label>
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="ColorVehiculo" id="Color" required>
+                        <div class="underline"></div>
+                        <label for="">Color del Vehiculo</label>
+                    </div>
+
+                    <div class="input-data">
+                        <input type="text" name="PrecioAlquiler" id="Precio" required>
+                        <div class="underline"></div>
+                        <label for="">Precio Del alquiler</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label style="padding: 10px;">
+                            <i class='bx bx-lock-alt'></i>
+                            <select type="text" name="TipoAuto" id="AgregarAutoTipoVehiculo" style="">
+                                <option value="1">Automovil</option>
+                                <option value="2">Moto</option>
+                                <option value="3">Camión</option>
+                                <option value="4">Buseta</option>
+                            </select>
+
+                        </label>
+                    </div>
+
+                    <div>
+                        <label style="padding: 10px;">
+                            <i class='bx bx-lock-alt'></i>
+                            <select type="text" name="tipoCliente" id="AgregarAutoTipoConbustible" style="">
+                                <option value="1">Diesel</option>
+                                <option value="2">Gasolina</option>
+                                <option value="3">Hibrido</option>
+                                <option value="4">Eléctrico</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </div>
+
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" class="btn btn-primary btn-rounded" value="Agregar Vehiculo" id="BtnAgregarVehiculo"
+                           data-mdb-ripple-init  />
+                </div>
+
+            </form>
+        </div>
+
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous">
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/Content/js/AgregarVehiculo.js"></script>
+
 </body>
 </html>

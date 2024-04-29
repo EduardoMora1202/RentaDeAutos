@@ -107,32 +107,6 @@ export const deleteCliente = async (req, res) => {
     res.send(error.message);
   }
 };
-/*Modifica e  */
-export const updateCliente = async (req, res) => {
-  const { nombre, cedula, Correo } = req.body;
-  const { id } = req.params;
-  if (nombre == null || cedula == null || Correo == null) {
-    return res.status(400).json({
-      msg: "Solicitud incorrecta. Por favor llena todos los espacios",
-    });
-  }
-  try {
-    const pool = await getConnection();
-
-    await pool
-      .request()
-      .input("nombre", SQl.VarChar, nombre)
-      .input("cedula", SQl.VarChar, cedula)
-      .input("Correo", SQl.VarChar, Correo)
-      .input("Id", id)
-      .query(queries.UpdateClientes);
-
-    res.json({ nombre, cedula, Correo });
-  } catch (error) {
-    res.status(500);
-    res.send(error.message);
-  }
-};
 
 export const ValidarUsuario = async (req, res) => {
   const { Identificacion, Contrasena } = req.body;
@@ -146,7 +120,7 @@ export const ValidarUsuario = async (req, res) => {
     const pool = await getConnection();
     const request = pool.request();
     request.input("Identificacion", SQl.VarChar, Identificacion);
-    request.input("contrasena", SQl.VarChar, Contrasena);
+    request.input("Contrasena", SQl.VarChar, Contrasena);
 
     const result = await request.query(queries.GetInicoSesion);
     const user = result.recordset[0]; // Suponiendo que obtienes solo un usuario
@@ -156,15 +130,14 @@ export const ValidarUsuario = async (req, res) => {
       res.json({ success: true, msg: "Inicio de sesión exitoso" });
     } else {
       // Usuario no encontrado o credenciales incorrectas
-      res
-        .status(401)
-        .json({
-          success: false,
-          msg: "Credenciales de inicio de sesión incorrectas",
-        });
+      res.status(401).json({
+        success: false,
+        msg: "Credenciales de inicio de sesión incorrectas",
+      });
     }
   } catch (error) {
     console.error("Error en ValidarUsuario:", error);
     res.status(500).json({ success: false, msg: "Error interno del servidor" });
   }
 };
+
