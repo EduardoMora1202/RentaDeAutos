@@ -21,7 +21,7 @@ POST http://localhost:4000/ValidarCliente
 Content-Type: application/json
 
 {
-    "Identificacion": "305420904",
+    "Identificacion": "508740802",
     "Contrasena": "123456"
 }
 ###

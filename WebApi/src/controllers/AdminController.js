@@ -142,7 +142,7 @@ export const VerClientesTable = async (req, res) => {
 };
 
 /*Elimina un cliente */
-/*export const deleteCliente = async (req, res) => {
+export const EliminarCliente = async (req, res) => {
   const { id } = req.params;
   if (id == null) {
     return res.status(400).json({
@@ -162,30 +162,34 @@ export const VerClientesTable = async (req, res) => {
     res.status(500);
     res.send(error.message);
   }
-};*/
+};
 /*Modifica e  */
-/*export const updateCliente = async (req, res) => {
-  const { nombre, cedula, Correo } = req.body;
+export const updateCliente = async (req, res) => {
+  const { Identificacion, Nombre, Contrasena,Telefono, Direccion, TipoCliente } = req.body;
   const { id } = req.params;
-  if (nombre == null || cedula == null || Correo == null) {
+  if (Identificacion == null || Nombre == null || Contrasena == null || Telefono == null|| Direccion == null|| TipoCliente == null) {
     return res.status(400).json({
       msg: "Solicitud incorrecta. Por favor llena todos los espacios",
     });
   }
   try {
     const pool = await getConnection();
+    
 
     await pool
       .request()
-      .input("nombre", SQl.VarChar, nombre)
-      .input("cedula", SQl.VarChar, cedula)
-      .input("Correo", SQl.VarChar, Correo)
+      .input("Identificacion", SQl.VarChar, Identificacion)
+      .input("Nombre", SQl.VarChar, Nombre)
+      .input("Contrasena", SQl.VarChar, Contrasena)
+      .input("Telefono", SQl.VarChar, Telefono)
+      .input("Direccion", SQl.VarChar, Direccion)
+      .input("IdTipoCliente", SQl.Int, TipoCliente)
       .input("Id", id)
-      .query(queries.UpdateClientes);
+      .query(queries.ModificarCliente);
 
-    res.json({ nombre, cedula, Correo });
+    res.json({ Identificacion, Nombre, Telefono, Direccion, TipoCliente });
   } catch (error) {
     res.status(500);
     res.send(error.message);
   }
-};*/
+};

@@ -1,12 +1,14 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>IngresoVehiculosAdmin</title>
+    <title>ModificarInfoCliente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -19,7 +21,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css">
     <!-- CSS -->
     <link rel="stylesheet" href="~/Content/css/AgregarVehiculo.css">
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -35,26 +36,18 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            @Html.ActionLink("Agregar Vehiculos", "IngresoVehiculosAdmin", "Admin", new { area = "" }, new
-                       {
-                           @class =
-                            "nav-link mx-lg-2 active"
-                       })
+                            <a href="#" class="nav-link mx-lg-2 active">Agregar Vehiculo</a>
                         </li>
 
                         <li class="nav-item">
                             @Html.ActionLink("Ver Vehiculos", "VerVehiculosAdmin", "Admin", new { area = "" }, new
-                            {
-                            @class =
-                            "nav-link mx-lg-2 "
-                            })
+                       {
+                           @class =
+                            "nav-link mx-lg-2"
+                       })
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Ver Clientes", "VerClienteAdmin", "Admin", new { area = "" }, new
-                            {
-                           @class =
-                            "nav-link mx-lg-2 "
-                            })
+                            <a href="#" class="nav-link mx-lg-2">Ver Clientes</a>
                         </li>
 
                     </ul>
@@ -68,90 +61,57 @@
             </button>
         </div>
     </nav>
+
     <section class="hero-section">
         <div class="container" style="background-color: #fff; ">
             <div class="text">
                 Agregar Vehiculo
             </div>
-            <form id="FormularioAgregarVehiculo" method="post" novalidate>
-                <div class="form-row">
-                    <div>
-                        <label style="padding: 10px;">
-                            <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="TipoMarca" id="AgregarAutoMarca" style="">
-                                <option value="1">Toyota</option>
-                                <option value="2">Ford</option>
-                                <option value="3">Honda</option>
-                                <option value="4">BMW</option>
-                                <option value="5">Mercedes-Benz</option>
-                            </select>
-
-                        </label>
-                    </div>
-
-                    <div class="input-data">
-                        <input type="text" name="PlacaVehiculo" id="Placa" required>
-                        <div class="underline"></div>
-                        <label for="">Placa Del Vehiculo</label>
-                    </div>
-
-                </div>
-
+            <form id="formularioModificar" method="post" novalidate>
                 <div class="form-row">
                     <div class="input-data">
-                        <input type="text" name="ModeloVehiculo" id="Modelo" required>
+                        <input type="text" name="IdentificacionCliente" id="Identificacion" required>
                         <div class="underline"></div>
-                        <label for="">Modelo Del Vehiculo</label>
-                    </div>
-
-                    <div class="input-data">
-                        <input type="text" name="CapacidadPasajeros" id="CapaPasajeros" required>
-                        <div class="underline"></div>
-                        <label for="">Capacidad De Pasajeros</label>
-
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="input-data">
-                        <input type="text" name="ColorVehiculo" id="Color" required>
-                        <div class="underline"></div>
-                        <label for="">Color del Vehiculo</label>
-                    </div>
-
-                    <div class="input-data">
-                        <input type="text" name="PrecioAlquiler" id="Precio" required>
-                        <div class="underline"></div>
-                        <label for="">Precio Del alquiler</label>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div>
-                        <label style="padding: 10px;">
-                            <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="TipoAuto" id="AgregarAutoTipoVehiculo" style="">
-                                <option value="1">Automovil</option>
-                                <option value="2">Moto</option>
-                                <option value="3">Camión</option>
-                                <option value="4">Buseta</option>
-                            </select>
-
-                        </label>
+                        <label for="">Identificacion</label>
                     </div>
 
                     <div>
                         <label style="padding: 10px;">
                             <i class='bx bx-lock-alt'></i>
-                            <select type="text" name="tipoCliente" id="AgregarAutoTipoConbustible" style="">
-                                <option value="1">Diesel</option>
-                                <option value="2">Gasolina</option>
-                                <option value="3">Hibrido</option>
-                                <option value="4">Eléctrico</option>
+                            <select type="text" name="tipoCliente" id="TipoCliente" style="">
+                                <option value="1">Nacional</option>
+                                <option value="2">Extranjero</option>
                             </select>
                         </label>
-
                     </div>
                 </div>
 
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="NombreCliente" id="Nombre" required>
+                        <div class="underline"></div>
+                        <label for="">Nombre del Cliente</label>
+                    </div>
+
+                    <div class="input-data">
+                        <input type="text" name="CapacidadPasajeros" id="Contrasena" required>
+                        <div class="underline"></div>
+                        <label for="">Contraseña </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="ColorVehiculo" id="Telefono" required>
+                        <div class="underline"></div>
+                        <label for="">Numero Telefonico</label>
+                    </div>
+
+                    <div class="input-data">
+                        <input type="text" name="PrecioAlquiler" id="Direccion" required>
+                        <div class="underline"></div>
+                        <label for="">Direccion</label>
+                    </div>
+                </div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <input type="submit" class="btn btn-primary btn-rounded" value="Agregar Vehiculo" id="BtnAgregarVehiculo"
@@ -160,18 +120,13 @@
 
             </form>
         </div>
-
-
     </section>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous">
 
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/Content/js/AgregarVehiculo.js"></script>
-
+    <script src="~/Content/js/ModificarCliente.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-GET http://localhost:4000/GetVerAutosTablas
+GET http://localhost:4000/GetVerClienteTablas
 
 ###
 # 1. Agregar Vehiculo nuevo
@@ -23,7 +23,7 @@ Content-Type: application/json
 # 2. Eliminar Vehiculos
 ###
 
-DELETE http://localhost:4000/EliminarVehuculos/16
+DELETE http://localhost:4000/EliminarCliente/9
 
 ###
 # 3. Modificar Vehiculo
@@ -37,4 +37,21 @@ Content-Type: application/json
     "Color": "verde",
     "Placa": "12457"
 }
+
+###
+# 4. ModificarCliente
+###
+
+PUT http://localhost:4000/ModificarCliente/3
+Content-Type: application/json
+
+{
+    "Identificacion": "305890878",
+    "Nombre": "Mario",
+    "Contrasena": "14789",
+    "Telefono": "68950542",
+    "Direccion": "Cartago",
+    "TipoCliente": "2"
+}
+
 

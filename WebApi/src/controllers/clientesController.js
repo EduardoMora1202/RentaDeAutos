@@ -115,7 +115,6 @@ export const ValidarUsuario = async (req, res) => {
       msg: "Solicitud incorrecta. Por favor llena todos los espacios",
     });
   }
-  console.log("Identificacion:", Identificacion, "Contrasena:", Contrasena);
   try {
     const pool = await getConnection();
     const request = pool.request();
@@ -124,12 +123,13 @@ export const ValidarUsuario = async (req, res) => {
 
     const result = await request.query(queries.GetInicoSesion);
     const user = result.recordset[0]; // Suponiendo que obtienes solo un usuario
-
     if (user) {
-      // Usuario encontrado, inicio de sesión exitoso
-      res.json({ success: true, msg: "Inicio de sesión exitoso" });
+      res.json({
+        success: true,
+        msg: "Inicio de sesión exitoso",
+        tipoUsuario: user.TipoUsuario,
+      });
     } else {
-      // Usuario no encontrado o credenciales incorrectas
       res.status(401).json({
         success: false,
         msg: "Credenciales de inicio de sesión incorrectas",
@@ -140,4 +140,3 @@ export const ValidarUsuario = async (req, res) => {
     res.status(500).json({ success: false, msg: "Error interno del servidor" });
   }
 };
-

@@ -5,19 +5,26 @@ $(document).ready(function () {
         var Identificacion = $('#IniUserIdentificacion').val();
         var Contrasena = $('#iniUserContrasena').val();
 
-        alert("Identificacion", Identificacion,"Contrasena",Contrasena);
-        console.log("Identificacion", Identificacion,"Contrasena",Contrasena);
         $.ajax({
             type: "POST",
             url: 'http://localhost:4000/ValidarCliente',
             contentType: "application/json",
             data: JSON.stringify({ Identificacion: Identificacion, Contrasena: Contrasena }), // Cambia "cedula" a "Cedula"
             success: function (response) {
-                // Si la validación del cliente es exitosa, enviar el correo electrónico de verificación
                 if (response.success) {
                     console.log(response);
+
                     alert("Inicio de Sesion Exitoso");
-                    window.location.href = "/Home/Principal";
+
+                    if (response.tipoUsuario === true) {
+
+                        window.location.href = "/Admin/IngresoVehiculosAdmin";
+
+                    } else if (response.tipoUsuario === false) {
+
+                        window.location.href = "/Home/Principal";
+
+                    }
                 } else {
                     // Si hay un error en la validación del cliente, mostrar un mensaje de error
                     alert("Identificacion o Contraseña Incorrectas.");

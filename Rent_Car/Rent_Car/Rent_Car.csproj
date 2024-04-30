@@ -207,6 +207,7 @@
     <Content Include="Content\js\jquery.waypoints.min.js" />
     <Content Include="Content\js\Login.js" />
     <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\ModificarCliente.js" />
     <Content Include="Content\js\ModificarVehiculo.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="Content\js\popper.min.js" />
@@ -377,6 +378,7 @@
     <Content Include="Views\Admin\VerVehiculosAdmin.cshtml" />
     <Content Include="Views\Admin\ModificarInfoVehiculo.cshtml" />
     <Content Include="Views\Admin\VerClienteAdmin.cshtml" />
+    <Content Include="Views\Admin\ModificarInfoCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
