@@ -43,19 +43,11 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                    
-                    <a href="index.html" class="nav-link">Home</a>
-                    
+
+                        <a href="index.html" class="nav-link">Home</a>
+
                     </li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item">
-
-                        @Html.ActionLink("Cars", "VerAutosAlquilado", "Home", new { area = "" }, new
-                   {
-                       @class =
-"nav-link"
-                   })
-                    </li>
 
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Log in</a></li>
@@ -90,17 +82,17 @@
                 <div class="col-md-12	featured-top">
                     <div class="row no-gutters">
                         <div class="col-md-4 d-flex align-items-center">
-                            <form action="#" class="request-form ftco-animate bg-primary">
+                            <form id="formularioReserveDia" action="#" class="request-form ftco-animate bg-primary">
                                 <h2>Arquila tu Vehiculo</h2>
 
                                 <div class="d-flex">
                                     <div class="form-group mr-2">
                                         <label for="" class="label">Fecha de Recoger</label>
-                                        <input type="date" class="form-control" id="book_pick_date" placeholder="Date">
+                                        <input type="date" class="form-control" id="FechaRecoger" placeholder="Date">
                                     </div>
                                     <div class="form-group ml-2">
                                         <label for="" class="label">Fecha de Entrega</label>
-                                        <input type="date" class="form-control" id="book_off_date" placeholder="Date">
+                                        <input type="date" class="form-control" id="FechaEntrega" placeholder="Date">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -108,8 +100,11 @@
                                     <input type="text" class="form-control" id="time_pick" placeholder="Tiempo">
                                 </div>
                                 <div class="form-group">
+
                                     <input type="submit" value="Rente Su vehiculo Ahora"
                                            class="btn btn-secondary py-3 px-4">
+
+
                                 </div>
                             </form>
                         </div>
@@ -154,6 +149,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="ftco-section ftco-no-pt bg-light">
@@ -465,5 +461,9 @@
     <script src="~/Content/js/scrollax.min.js"></script>
 
     <script src="~/Content/js/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Content/js/Principal.js"></script>
+
 </body>
 </html>

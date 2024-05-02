@@ -2,13 +2,17 @@ export const queries = {
   GetAllAutos: `SELECT V.*, M.Marca FROM Vehiculos V JOIN Tipo_Marca M ON V.idMarca = M.Id WHERE V.Disponiblidad = 1;`,
 
   GetCrearNuevoCliente:
-    "INSERT INTO Cliente (Identificacion, Nombre, Contrasena, IdTipoCliente, Telefono, Direccion) VALUES (@Identificacion, @Nombre, @Contrasena, @IdTipoCliente, @Telefono, @Direccion)",
+    "INSERT INTO Cliente (Identificacion, Nombre, Contrasena, IdTipoCliente, Telefono, Direccion, TipoUsuario) VALUES (@Identificacion, @Nombre, @Contrasena, @IdTipoCliente, @Telefono, @Direccion, @TipoUsuario)",
 
   GetInicoSesion:
-    "SELECT TipoUsuario FROM Cliente WHERE Identificacion = @Identificacion AND Contrasena = @Contrasena",
+    "SELECT Id, TipoUsuario FROM Cliente WHERE Identificacion = @Identificacion AND Contrasena = @Contrasena",
 
   GetDetallesVehiculoById:
     "SELECT V.*, M.Marca, TV.Tipo_Carro AS TipoVehiculo, TC.Tipo_Combustible AS TipoCombustible FROM Vehiculos V JOIN Tipo_Marca M ON V.idMarca = M.Id JOIN Tipo_Vehiculo TV ON V.idTipo_Vehiculo = TV.Id JOIN Tipo_Combustible TC ON V.IdTipoCombustible = TC.Id WHERE V.Id = @id;",
+
+    PutTarjetaCredito: `INSERT INTO Tarjeta_Credito (Numero_Tarjeta, IdTipo_Tarjeta, Fecha_Vencimiento, Nombre_Titular) VALUES (@Numero_Tarjeta, @Tipo_Tarjeta, @Fecha_Vencimiento, @Nombre_Titular);`,
+
+    PutAlquiler: `INSERT INTO Arquileres (IdClientes, IdVehiculos, Fecha_Inicio, Fecha_Fin, Precio_Total,Seguro_Vehiculo) VALUES (@IdClientes, @IdVehiculos, @Fecha_Inicio, @Fecha_Fin, @Precio_Total, @Seguro_Vehiculo);`,
 
   /*Administador */
   GetVerVehiculos: `
@@ -54,9 +58,8 @@ FROM
 JOIN 
   Tipo_Cliente tc ON c.IdTipoCliente = tc.Id;`,
 
-
   DeleteClientes: "DELETE FROM Cliente WHERE Id = @id",
 
   ModificarCliente:
-  "UPDATE Cliente SET Identificacion = @Identificacion, Nombre = @Nombre, Contrasena = @Contrasena, IdTipoCliente = @IdTipoCliente, Telefono = @Telefono, Direccion = @Direccion WHERE Id = @id",
+    "UPDATE Cliente SET Identificacion = @Identificacion, Nombre = @Nombre, Contrasena = @Contrasena, IdTipoCliente = @IdTipoCliente, Telefono = @Telefono, Direccion = @Direccion WHERE Id = @id",
 };

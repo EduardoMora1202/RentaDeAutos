@@ -163,6 +163,7 @@
     <Content Include="Content\css\open-iconic-bootstrap.min.css" />
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
+    <Content Include="Content\css\PantallaPago.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\VerVehiculosTable.css" />
     <Content Include="Content\fonts\flaticon\backup.txt" />
@@ -193,6 +194,7 @@
     <Content Include="Content\js\aos.js" />
     <Content Include="Content\js\bootstrap-datepicker.js" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\Class\Clases.js" />
     <Content Include="Content\js\DetallesAutos.js" />
     <Content Include="Content\js\google-map.js" />
     <Content Include="Content\js\InformacionAutoTable.js" />
@@ -210,7 +212,9 @@
     <Content Include="Content\js\ModificarCliente.js" />
     <Content Include="Content\js\ModificarVehiculo.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\Pago.js" />
     <Content Include="Content\js\popper.min.js" />
+    <Content Include="Content\js\Principal.js" />
     <Content Include="Content\js\range.js" />
     <Content Include="Content\js\registrar.js" />
     <Content Include="Content\js\script.js" />
@@ -379,6 +383,7 @@
     <Content Include="Views\Admin\ModificarInfoVehiculo.cshtml" />
     <Content Include="Views\Admin\VerClienteAdmin.cshtml" />
     <Content Include="Views\Admin\ModificarInfoCliente.cshtml" />
+    <Content Include="Views\Home\ReservarAuto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     $('#FormularioInicarSesion').submit(function (event) {
         event.preventDefault();
@@ -14,9 +16,11 @@ $(document).ready(function () {
                 if (response.success) {
                     console.log(response);
 
+                   
                     alert("Inicio de Sesion Exitoso");
 
                     if (response.tipoUsuario === true) {
+
 
                         window.location.href = "/Admin/IngresoVehiculosAdmin";
 

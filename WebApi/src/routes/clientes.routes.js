@@ -1,8 +1,10 @@
 import { Router } from "express";
 import {
   crearClientes,
+  formularioReserveDia,
   getAutos,
   getVehiculosDetallesById,
+  ReservarVehiculo,
   ValidarUsuario,
 } from "../controllers/clientesController";
 
@@ -31,6 +33,10 @@ router.post("/CrearClientes", crearClientes);
 
 router.post("/ValidarCliente", ValidarUsuario);
 
+router.post("/ReserveDia", formularioReserveDia);
+
+router.post("/ReservarAuto/:id", ReservarVehiculo);
+
 /*Rutas Administrador*/
 router.get("/GetVerAutosTablas", VerAutosTable);
 
@@ -40,12 +46,10 @@ router.delete("/EliminarVehuculos/:id", deleteVehiculo);
 
 router.put("/ModificarVehiculo/:id", updateVehiculo);
 
-router.get("/GetVerClienteTablas",VerClientesTable);
+router.get("/GetVerClienteTablas", VerClientesTable);
 
 router.delete("/EliminarCliente/:id", EliminarCliente);
 
 router.put("/ModificarCliente/:id", updateCliente);
-
-
 
 export default router;

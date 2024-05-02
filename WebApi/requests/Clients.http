@@ -21,7 +21,7 @@ POST http://localhost:4000/ValidarCliente
 Content-Type: application/json
 
 {
-    "Identificacion": "508740802",
+    "Identificacion": "508740702",
     "Contrasena": "123456"
 }
 ###
@@ -38,7 +38,7 @@ DELETE http://localhost:4000/EliminarClientes/37
 ###
 #5. Actualizar un cliente
 ###
-PUT http://localhost:4000/ActualizarClientes/24
+PUT http://localhost:4000/ReservarAuto/24
 Content-Type: application/json
 
 {

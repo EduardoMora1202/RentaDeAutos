@@ -20,6 +20,20 @@
         });
     });
 
+    $(document).on("click", ".Reserva-btn", function () {
+        // Obtener el ID del auto seleccionado
+        var autoId = $(this).data("id");
+        var autoPrecio = $(this).data("precio");
+
+        console.log(autoPrecio);
+        console.log(autoId);
+
+        window.location.href = "/Home/ReservarAuto?id=" + autoId + "&precio=" + autoPrecio;
+        alert("Detalles del vehículo cargados correctamente.");
+        
+    });
+   
+
     // Tu código AJAX para cargar la lista de autos
     $.ajax({
         url: 'http://localhost:4000/VerVehiculos',
@@ -44,7 +58,7 @@
                                         <p class="price ml-auto">$${auto.PrecioAlquilerDia} <span>/Dia</span></p>
                                     </div>
                                     <p class="d-flex mb-0 d-block">
-                                        <a href="#" class="btn btn-primary py-2 mr-1">Reservar</a> 
+                                       <button class="btn btn-primary py-2 ml-1 Reserva-btn" data-id="${auto.Id}" data-precio="${auto.PrecioAlquilerDia}">Reservar</button>
                                         <button class="btn btn-secondary py-2 ml-1 detalle-btn" data-id="${auto.Id}">Detalles</button>
                                     </p>
                                 </div>

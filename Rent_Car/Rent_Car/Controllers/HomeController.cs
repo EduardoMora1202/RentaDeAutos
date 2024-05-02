@@ -31,6 +31,10 @@ namespace Rent_Car.Controllers
         public ActionResult VerDetallesAutos()
         {
             return View();
+        }  
+        public ActionResult ReservarAuto()
+        {
+            return View();
         }
 
     }

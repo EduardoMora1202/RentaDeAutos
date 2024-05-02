@@ -1,0 +1,98 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ReservarAuto</title>
+    <link rel="stylesheet" href="~/Content/css/PantallaPago.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Garantiza el alquiler de tu vehiculo</div>
+        <div class="content">
+            <form id="FormularioReservaAuto" action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Emisor de la tarjeta de credito</span>
+                        <select type="text" placeholder="Enter your name"id="ReservartipoTarjeta" required>
+                            <option value="1">Visa</option>
+                            <option value="2">MasterCard</option>
+                            <option value="3">American Express</option>
+                            <option value="4">Paypal</option>
+                            <option value="5">Discover</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombre del Titular de la tarjeta</span>
+                        <input type="text" placeholder="Nombre y apellido" id="Nombretarjeta" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Numero de tarjeta de credito</span>
+                        <input type="text" placeholder="0000 0000 0000 0000" id="Numerotarjeta" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Fecha de caducidad</span>
+                        <input type="date" placeholder="Fecha de caducidad" id="FechaCadicidad" required>
+                    </div>
+
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1" onclick="addPrice()">
+                    <input type="radio" name="gender" id="dot-2" onclick="addPrice()">
+
+                    <span class="gender-title">Servicios Adicionales</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Seguro del vehiculo</span><br>
+
+
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                        </label>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <hr style="height:1.7px; width:100%; background-color:black; border:none;">
+                    </div>
+                    <span class="gender-title">Resumen de pago</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span for="" style="padding-right:40px ;">Seguro del vehiculo:</span>
+                            <Label id="seguro-precio"
+                                   style="display: inline-block; padding: 2px 37px; border: 1px solid #000; border-radius: 4px;">0.0</Label>
+                        </label>
+                        <label for="dot-2"></label>
+
+                    </div>
+                    <div class="category">
+                        <label for="dot-2">
+                            <span for="" style="padding-right:40px ;">Alquiler del vehiculo:</span>
+                            <Label id="alquilerLabel" style="display: inline-block; padding: 2px 37px; border: 1px solid #000; border-radius: 4px;">0.0</Label>
+                        </label>
+
+                    </div>
+                    <div class="category">
+                        <label for="dot-3">
+                            <span for="" style="padding-right:161px ;">Total:</span>
+                            <Label id="TotalPagar" style="display: inline-block; padding: 2px 37px; border: 1px solid #000; border-radius: 4px;">0.0</Label>
+                        </label>
+
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Pagar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Content/js/Pago.js"></script>
+</body>
+</html>
