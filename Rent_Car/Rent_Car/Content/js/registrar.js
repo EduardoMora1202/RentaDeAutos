@@ -15,8 +15,6 @@ $(document).ready(function () {
         else {
             IdTipoCliente = "2";
         }
-        alert("Tipo cliente", tipoCliente)
-        alert(Identificacion, Nombre, Contrasena, Telefono, IdTipoCliente,Direccion)
         $.ajax({
             url: 'http://localhost:4000/CrearClientes',
             type: 'POST',

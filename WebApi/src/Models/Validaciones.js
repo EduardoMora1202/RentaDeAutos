@@ -1,6 +1,6 @@
 export async function GenerarCodigoAleatorio() {
     const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    const longitud = 6;
+    const longitud = 9;
     let codigo = "";
 
     for (let i = 0; i < longitud; i++) {

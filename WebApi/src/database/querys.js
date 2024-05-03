@@ -12,7 +12,7 @@ export const queries = {
 
     PutTarjetaCredito: `INSERT INTO Tarjeta_Credito (Numero_Tarjeta, IdTipo_Tarjeta, Fecha_Vencimiento, Nombre_Titular) VALUES (@Numero_Tarjeta, @Tipo_Tarjeta, @Fecha_Vencimiento, @Nombre_Titular);`,
 
-    PutAlquiler: `INSERT INTO Arquileres (IdClientes, IdVehiculos, Fecha_Inicio, Fecha_Fin, Precio_Total,Seguro_Vehiculo) VALUES (@IdClientes, @IdVehiculos, @Fecha_Inicio, @Fecha_Fin, @Precio_Total, @Seguro_Vehiculo);`,
+    PutAlquiler: `INSERT INTO Arquileres (IdClientes, IdVehiculos, Fecha_Inicio, Fecha_Fin, Precio_Total, Seguro_Vehiculo, CodigoReserva) VALUES (@IdClientes, @IdVehiculos, @Fecha_Inicio, @Fecha_Fin, @Precio_Total, @Seguro_Vehiculo,@CodigoReserva);`,
 
   /*Administador */
   GetVerVehiculos: `

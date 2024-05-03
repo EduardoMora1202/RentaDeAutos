@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\views\\home\\codigoreserva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\codigoreserva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\views\\home\\reservarauto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\reservarauto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\content\\js\\codigoreserva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\codigoreserva.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\views\\home\\principal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\principal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\views\\home\\verautosalquilado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\verautosalquilado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\content\\js\\pago.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\content\\js\\pago.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\pago.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\content\\js\\modificarcliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\modificarcliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\content\\js\\principal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\principal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\content\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\content\\js\\detallesautos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\detallesautos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|c:\\users\\brandon mora\\documents\\universidad\\base de datos\\proyectorentacarros\\rent_car\\rent_car\\content\\js\\registrar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\content\\js\\registrar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\views\\home\\principal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\views\\home\\principal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\rent_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9410D-1CE5-430C-B968-04F96C7AA721}|Rent_Car\\Rent_Car.csproj|solutionrelative:rent_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,116 +50,130 @@
       "DocumentGroups": [
         {
           "DockedWidth": 192,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Pago.js",
               "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\Pago.js",
               "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\Pago.js",
               "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\Pago.js",
               "RelativeToolTip": "Rent_Car\\Content\\js\\Pago.js",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCgAAABAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAkwCgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-30T20:37:36.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Rent_Car\\Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Rent_Car\\Views\\Home\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-01T01:11:01.18Z",
+              "WhenOpened": "2024-05-02T18:53:30.25Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "DetallesAutos.js",
-              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\DetallesAutos.js",
-              "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\DetallesAutos.js",
-              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\DetallesAutos.js",
-              "RelativeToolTip": "Rent_Car\\Content\\js\\DetallesAutos.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Title": "Principal.js",
+              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\Principal.js",
+              "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\Principal.js",
+              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\Principal.js",
+              "RelativeToolTip": "Rent_Car\\Content\\js\\Principal.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-01T01:07:02.005Z"
+              "WhenOpened": "2024-05-02T20:15:30.576Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "COdigoReserva.js",
+              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\COdigoReserva.js",
+              "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\COdigoReserva.js",
+              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\COdigoReserva.js",
+              "RelativeToolTip": "Rent_Car\\Content\\js\\COdigoReserva.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-03T02:15:12.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReservarAuto.cshtml",
+              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\ReservarAuto.cshtml",
+              "RelativeDocumentMoniker": "Rent_Car\\Views\\Home\\ReservarAuto.cshtml",
+              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\ReservarAuto.cshtml",
+              "RelativeToolTip": "Rent_Car\\Views\\Home\\ReservarAuto.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T02:04:36.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CodigoReserva.cshtml",
+              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\CodigoReserva.cshtml",
+              "RelativeDocumentMoniker": "Rent_Car\\Views\\Home\\CodigoReserva.cshtml",
+              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\CodigoReserva.cshtml",
+              "RelativeToolTip": "Rent_Car\\Views\\Home\\CodigoReserva.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T21:53:05.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "registrar.js",
+              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\registrar.js",
+              "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\registrar.js",
+              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\registrar.js",
+              "RelativeToolTip": "Rent_Car\\Content\\js\\registrar.js",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwB4AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-02T18:50:11.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Rent_Car\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Rent_Car\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwCIAAAAWAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCUAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T20:12:11.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "VerAutosAlquilado.cshtml",
               "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\VerAutosAlquilado.cshtml",
               "RelativeDocumentMoniker": "Rent_Car\\Views\\Home\\VerAutosAlquilado.cshtml",
               "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\VerAutosAlquilado.cshtml",
               "RelativeToolTip": "Rent_Car\\Views\\Home\\VerAutosAlquilado.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-30T19:53:22.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Principal.cshtml",
               "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\Principal.cshtml",
               "RelativeDocumentMoniker": "Rent_Car\\Views\\Home\\Principal.cshtml",
               "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Views\\Home\\Principal.cshtml",
               "RelativeToolTip": "Rent_Car\\Views\\Home\\Principal.cshtml",
-              "ViewState": "AQIAAMQBAAAAAAAAAAAAANABAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-30T05:17:30.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModificarCliente.js",
-              "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\ModificarCliente.js",
-              "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\ModificarCliente.js",
-              "ToolTip": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\ModificarCliente.js",
-              "RelativeToolTip": "Rent_Car\\Content\\js\\ModificarCliente.js",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAQwBUAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-30T20:33:23.437Z",
+              "WhenOpened": "2024-04-30T05:17:30.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Login.js",
               "DocumentMoniker": "C:\\Users\\Brandon Mora\\Documents\\UNIVERSIDAD\\Base de datos\\ProyectoRentaCarros\\Rent_Car\\Rent_Car\\Content\\js\\Login.js",
               "RelativeDocumentMoniker": "Rent_Car\\Content\\js\\Login.js",

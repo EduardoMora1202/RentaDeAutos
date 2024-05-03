@@ -1,5 +1,7 @@
 const nodemailer = require("nodemailer");
 import { getConnection, SQl, queries } from "../database/Index";
+import { GenerarCodigoAleatorio } from "../Models/Validaciones";
+
 
 const Alquiler = {};
 const tarjetaCredito = {};
@@ -47,8 +49,7 @@ export const crearClientes = async (req, res) => {
     request.input("IdTipoCliente", SQl.Int, IdTipoCliente);
     request.input("Telefono", SQl.VarChar, Telefono);
     request.input("Direccion", SQl.VarChar, Direccion);
-    request.input("TipoUsuario", SQl.Bit, "0" );
-    
+    request.input("TipoUsuario", SQl.Bit, 0);
 
     await request.query(queries.GetCrearNuevoCliente);
 
@@ -90,28 +91,7 @@ export const getVehiculosDetallesById = async (req, res) => {
     res.send(error.message);
   }
 };
-/*Elimina un cliente */
-export const deleteCliente = async (req, res) => {
-  const { id } = req.params;
-  if (id == null) {
-    return res.status(400).json({
-      msg: "Solicitud incorrecta. Por favor llena todos los espacios",
-    });
-  }
-  console.log("id:", id);
-  try {
-    const pool = await getConnection();
-    const result = await pool
-      .request()
-      .input("Id", id)
-      .query(queries.DeleteClientes);
 
-    res.send(result);
-  } catch (error) {
-    res.status(500);
-    res.send(error.message);
-  }
-};
 
 export const ValidarUsuario = async (req, res) => {
   const { Identificacion, Contrasena } = req.body;
@@ -121,9 +101,6 @@ export const ValidarUsuario = async (req, res) => {
     });
   }
   try {
-    console.log("Identificacion:", Identificacion);
-    console.log("Contrasena:", Contrasena);
-    console.log("AntesAlquiler.IdCliente:", Alquiler.IdCliente);
     const pool = await getConnection();
     const request = pool.request();
     request.input("Identificacion", SQl.VarChar, Identificacion);
@@ -160,10 +137,10 @@ export const formularioReserveDia = async (req, res) => {
     });
   }
   try {
-    console.log("Identificacion:", FechaRecoger);
-    console.log("FechaEntrega:", FechaEntrega);
     Alquiler.Fecha_Inicio = FechaRecoger;
     Alquiler.Fecha_Fin = FechaEntrega;
+    const dias = (new Date(FechaEntrega) - new Date(FechaRecoger)) / 86400000;
+    console.log("Dias:", dias);
     console.log("Alquiler.Fecha_Inicio:", Alquiler.Fecha_Inicio);
     console.log("Alquiler.Fecha_Fin:", Alquiler.Fecha_Fin);
     res.json({
@@ -198,65 +175,47 @@ export const ReservarVehiculo = async (req, res) => {
       msg: "Solicitud incorrecta. Por favor llena todos los espacios",
     });
   }
-  console.log("idVehiculo:", id);
-  console.log("Precio_Total:", Precio_Total);
-  console.log("Seguro_Vehiculo:", Seguro_Vehiculo);
-  console.log("Alquiler.IdCliente:", Alquiler.IdCliente);
-  console.log("Alquiler.Fecha_Inicio:", Alquiler.Fecha_Inicio);
-  console.log("Alquiler.Fecha_Fin:", Alquiler.Fecha_Fin);
-  console.log("Numero_Tarjeta:", Numero_Tarjeta);
-  console.log("Tipo_Tarjeta:", Tipo_Tarjeta);
-  console.log("Fecha_Vencimiento:", Fecha_Vencimiento);
-  console.log("Nombre_Titular:", Nombre_Titular);
-
+  const CodigoReserva = await GenerarCodigoAleatorio();
+  const PrecioTotal1 = parseFloat(Precio_Total);
   try {
     const pool = await getConnection();
-    const request = pool.request();
-    request.request();
-    request.input("Numero_Tarjeta", SQl.VarChar, Numero_Tarjeta);
-    request.input("Tipo_Tarjeta", SQl.Int, Tipo_Tarjeta);
-    request.input("Fecha_Vencimiento", SQl.Date, Fecha_Vencimiento);
-    request.input("Nombre_Titular", SQl.VarChar, Nombre_Titular);
-    const resultado = await request.query(queries.PutTarjetaCredito);
-    const user = resultado.recordset[0]; //
-    if (user) {
+    const requestTarjeta = pool.request();
+    requestTarjeta.input("Numero_Tarjeta", SQl.VarChar, Numero_Tarjeta);
+    requestTarjeta.input("Tipo_Tarjeta", SQl.Int, Tipo_Tarjeta);
+    requestTarjeta.input("Fecha_Vencimiento", SQl.Date, Fecha_Vencimiento);
+    requestTarjeta.input("Nombre_Titular", SQl.VarChar, Nombre_Titular);
+    const resultadoTarjeta = await requestTarjeta.query(
+      queries.PutTarjetaCredito
+    );
+    /*Insertar Alquiler */
+    const requestAlquiler = pool.request();
+    requestAlquiler.input("IdClientes", SQl.Int, Alquiler.IdCliente);
+    requestAlquiler.input("IdVehiculos", SQl.Int, id);
+    requestAlquiler.input("Fecha_Inicio", SQl.Date, Alquiler.Fecha_Inicio);
+    requestAlquiler.input("Fecha_Fin", SQl.Date, Alquiler.Fecha_Fin);
+    requestAlquiler.input("Precio_Total", SQl.Decimal, PrecioTotal1);
+    requestAlquiler.input("Seguro_Vehiculo", SQl.Bit, Seguro_Vehiculo);
+    requestAlquiler.input("CodigoReserva", SQl.VarChar, CodigoReserva);
+    const resultadoAlquiler = await requestAlquiler.query(queries.PutAlquiler);
+
+    // Verificar resultados
+    if (resultadoTarjeta.rowsAffected[0] > 0 && resultadoAlquiler.rowsAffected[0] > 0) {
+      console.log("Se ha agregado exitosamente tu tarjeta y alquiler");
+      console.log("CodigoReserva:", CodigoReserva);
       res.json({
         success: true,
-        msg: "Se ha agregado exitosamente tu targueta",
-        
+        msg: "Se ha agregado exitosamente tu tarjeta y alquiler",
+        CodigoReserva: CodigoReserva,
       });
     } else {
+      console.log("Hubo un error al agregar tu tarjeta o alquiler");
       res.status(401).json({
         success: false,
-        msg: "Error,No se ha podido agregar tu tarjeta",
-      });
-    }
-    const paal = await getConnection();
-    const requesta = paal.request();
-    requesta.request()
-    requesta.input("IdClientes", SQl.Int, Alquiler.IdCliente)
-    requesta.input("IdVehiculos", SQl.Int, id)
-    requesta.input("Fecha_Inicio", SQl.Date, Alquiler.Fecha_Inicio)
-    requesta.input("Fecha_Fin", SQl.Date, Alquiler.Fecha_Fin)
-    requesta.input("Precio_Total", SQl.VarChar, Precio_Total)
-    requesta.input("Seguro_Vehiculo", SQl.Bit, Seguro_Vehiculo);
-
-    const result = await request.query(queries.PutAlquiler);
-
-    const user2 = result.recordset[0]; //
-    if (user2) {
-      res.json({
-        success: true,
-        msg: "Se ha agregado exitosamente tu Alquiler",
-      });
-    } else {
-      res.status(401).json({
-        success: false,
-        msg: "Hubo un error en tu arquiler",
+        msg: "Hubo un error al agregar tu tarjeta o alquiler",
       });
     }
   } catch (error) {
-    res.status(500);
-    res.send(error.message);
+    console.log("Error en ReservarVehiculo:", error);
+    res.status(500).json({ success: false, msg: "Error interno del servidor", error: error.message });
   }
 };

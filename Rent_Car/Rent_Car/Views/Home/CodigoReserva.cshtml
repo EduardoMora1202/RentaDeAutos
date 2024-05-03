@@ -1,0 +1,132 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CodigoReserva</title>
+    <link rel="shortcut icon" type="image/png" href="https://poasrentacar.com/images/favicon.png" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://poasrentacar.com/css/style.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://poasrentacar.com/css/reserve.css" type="text/css" />
+
+</head>
+<body class="no-transition reserve">
+
+
+    <div class="container-fluid contentHeaderInterna reserve">
+        <!--header-->
+        <div class="fixed">
+            <div class="row topBar">
+                <div class="containerTop">
+                    <div class="divCall nopadding">
+
+                    </div>
+                    <div class="divPhone nopadding">
+                        <p>Celular: 506-2874-5087</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+
+                            <a class="nav-brand" href="../Home/Principal">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Logo-hd-rent-a-car.png">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Rent a Car</h1>
+                </div>
+            </div><!-- fin row top fleet-->
+        </div><!-- fin container-->
+    </div><!-- fin content top fleet-->
+
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div class="content_shadow">
+                            <div class="col-lg-5">
+                                <img src="http://www.poasrentacar.com/admin/vehiculos/imagenes/thumbs/X.EBAR.png"
+                                     alt="#" class="img-responsive" style="width:100%;">
+                            </div>
+                            <!--Se tiene que agregar el js y su id para ver esa informacion  -->
+                            <div class="col-lg-7 text-center">
+                                <h1 class="blue">Gracias Por<br>Reservar</h1>
+                                <p>
+                                    Su codigo de reservacion es el siguiente <strong id="CodigoReserva"></strong>  Si necesita más ayuda, no dude en ponerse en contacto con nosotros.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footerStick">
+        <div class="container-fluid containerFooter footerContact">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-sm-3 col-md-3 col-lg-4 ">
+                        &nbsp;
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4  middle">
+                        <div class="text-center">
+                            <h3>/</h3>
+                            <h2> </h2>
+                            <p class="nobottommargin">
+                                <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Local
+                                Celular: 506-2874-5087
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-4 ">
+                        &nbsp;
+                    </div>
+                </div>
+            </div><!-- container footer-->
+        </div>
+
+        <div class="container-fluid footerInfo">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <p class="text-center">© 2024 Rent A Car. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Content/js/COdigoReserva.js"></script>
+
+</body>
+</html>

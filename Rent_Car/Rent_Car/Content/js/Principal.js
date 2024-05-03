@@ -4,21 +4,17 @@
 
         var FechaRecoger = $('#FechaRecoger').val();
         var FechaEntrega = $('#FechaEntrega').val();
-        alert
         $.ajax({
             type: "POST",
             url: 'http://localhost:4000/ReserveDia',
             contentType: "application/json",
-            data: JSON.stringify({ FechaRecoger: FechaRecoger, FechaEntrega: FechaEntrega }), // Cambia "cedula" a "Cedula"
+            data: JSON.stringify({ FechaRecoger: FechaRecoger, FechaEntrega: FechaEntrega }), 
             success: function (response) {
                 if (response.success) {
-                    console.log(response);
-                    alert("Identificacion o Contraseña Incorrectas.");
-
                     window.location.href = "/Home/VerAutosAlquilado";
                 } else {
                     // Si hay un error en la validación del cliente, mostrar un mensaje de error
-                    alert("Identificacion o Contraseña Incorrectas.");
+                    alert("Se ha producido un error.");
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {

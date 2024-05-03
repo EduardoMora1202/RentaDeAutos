@@ -35,6 +35,9 @@ namespace Rent_Car.Controllers
         public ActionResult ReservarAuto()
         {
             return View();
+        } public ActionResult CodigoReserva()
+        {
+            return View();
         }
 
     }

@@ -1,4 +1,4 @@
-﻿var Seguro_Vehiculo1 = 0;
+﻿var Seguro_Vehiculo1 = "0";
 var Precio_Total1 = 0;
 $(document).ready(function () {
 
@@ -9,12 +9,12 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        var Tipo_Tarjeta = $('#ReservartipoTarjeta').val();
-        var Nombre_Titular = $('#Nombretarjeta').val();
         var Numero_Tarjeta = $('#Numerotarjeta').val();
+        var Tipo_Tarjeta = $('#ReservartipoTarjeta').val();
         var Fecha_Vencimiento = $('#FechaCadicidad').val();
-        var Seguro_Vehiculo = Seguro_Vehiculo1;
+        var Nombre_Titular = $('#Nombretarjeta').val();
         var Precio_Total = Precio_Total1;
+        var Seguro_Vehiculo = Seguro_Vehiculo1;
         var AutoId = obtenerParametroId();
 
         console.log("Tarje",Tipo_Tarjeta);
@@ -23,9 +23,8 @@ $(document).ready(function () {
         console.log("Fecha",Fecha_Vencimiento);
         console.log(Seguro_Vehiculo);
         console.log(Precio_Total);
-        console.log("id",AutoId);
+        console.log("idauto",AutoId);
 
-        alert("Probar")
 
 
         $.ajax({
@@ -34,11 +33,22 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify({ Numero_Tarjeta: Numero_Tarjeta, Tipo_Tarjeta: Tipo_Tarjeta, Fecha_Vencimiento: Fecha_Vencimiento, Nombre_Titular: Nombre_Titular, Precio_Total: Precio_Total, Seguro_Vehiculo: Seguro_Vehiculo }),
             success: function (response) {
-                alert("Cliente modificado correctamente.");
-                window.location.href = "/Admin/VerVehiculosAdmin";
+                console.log('CodigoReserva:', response.CodigoReserva); 
+                if (response.success) {
+                    console.log(response);
+
+                    alert(response.msg);
+                    window.location.href = "/Home/CodigoReserva?CodigoReserva=" + response.CodigoReserva;
+                } else {
+                    // Si hay un error en la validación del cliente, mostrar un mensaje de error
+                    alert("Hubo un error al agregar tu tarjeta o alquiler");
+                }
+               
             },
             error: function (error) {
-                alert("Hubo un error al modificar el cliente.");
+                console.error("Error en la solicitud AJAX:", error);
+
+                alert("Hubo un error al agregar tu tarjeta o alquiler");
             }
         });
     });
@@ -78,13 +88,13 @@ function addPrice() {
         seguroPrecioLabel.textContent = "$" + precioSeguro ;
         TotalPrecioLabel.textContent = "$" + total;
         Precio_Total1 = total;
-        Seguro_Vehiculo1 = 1;
+        Seguro_Vehiculo1 = "1";
 
     } else if (DosseguroRadioButton.checked) {
         seguroPrecioLabel.textContent = "0.0";
         TotalPrecioLabel.textContent = "$" + precio;
         Precio_Total1 = precio;  
-        Seguro_Vehiculo1 = 0;
+        Seguro_Vehiculo1 = "0";
 
 
     }
